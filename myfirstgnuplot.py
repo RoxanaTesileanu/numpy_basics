@@ -44,3 +44,5 @@ NameError: name 'g' is not defined
 >>> g('set out "GnuplotFromPython.png"')
 >>> g('plot sin(1/x)')
 >>> 
+>>> # from Lee Phillips "Gnuplot Cookbook" (2012)
+>>> 
