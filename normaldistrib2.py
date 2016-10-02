@@ -241,4 +241,29 @@ RuntimeWarning: overflow encountered in exp
 >>> y = Gaussian(x, 0, 1)
 >>> g.plot(Gnuplot.Data(x,y))
 >>> # why does it show only the positive part of the x axis??
+>>> g.set_range(xrange=[-100:100])
+SyntaxError: invalid syntax
+>>> g.set_range(xrange=[-100,100])
+
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    g.set_range(xrange=[-100,100])
+TypeError: set_range() got an unexpected keyword argument 'xrange'
+>>> g.set_range(-100, 100)
+
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    g.set_range(-100, 100)
+  File "/usr/lib/python2.7/dist-packages/Gnuplot/_Gnuplot.py", line 437, in set_range
+    (minrange,maxrange) = value
+TypeError: 'int' object is not iterable
+>>> g.set_range(-100, 100)
+
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    g.set_range(-100, 100)
+  File "/usr/lib/python2.7/dist-packages/Gnuplot/_Gnuplot.py", line 437, in set_range
+    (minrange,maxrange) = value
+TypeError: 'int' object is not iterable
+>>> # ok, I don't know yet how to set the x axis...
 >>> 
